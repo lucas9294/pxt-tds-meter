@@ -1,0 +1,48 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+<block id="p7C|}MTjtZ{5b}x33$rg" type="device_button_event">
+<field name="NAME">Button.A</field>
+<statement name="HANDLER">
+<block id="{Vr1fyY*3))uFzOr~Fdm" type="serial_writevalue">
+<value name="name">
+<shadow type="text">
+<field name="TEXT">estimated_TDS_ppm</field>
+</shadow>
+</value>
+<value name="value">
+<block type="tdsm_read_temperature">
+<value name="temperature">
+<shadow type="math_number_minmax">
+<mutation min="0" max="55" label="Temperature" />
+<field name="SLIDER">25</field>
+</shadow>
+</value>
+</block>
+</value>
+</block>
+</statement>
+</block>
+<block id="%)S?jr7YG4?eGou09wmJ" type="device_button_event">
+<field name="NAME">Button.B</field>
+<statement name="HANDLER">
+<block id="J|S-Amz:}2RnE-9kfLig" type="serial_writevalue">
+<value name="name">
+<shadow type="text">
+<field name="TEXT">TDS_ADC</field>
+</shadow>
+</value>
+<value name="value">
+<block type="tdsm_rawread">
+</block>
+</value>
+</block>
+</statement>
+</block>
+<block id="xRRgvHNlG#rZ^u`HECiY" type="pxt-on-start">
+<statement name="HANDLER">
+<block id="AM3C,(SJr3g?ar^B(^mb" type="tdsm_setup">
+<field name="pin">TDSAnalogPin.P1</field>
+<comment pinned="false">Default&#58; direct analog signal&#44; ADC full-scale 3.3V&#44; K&#61;1&#59; verify module output voltage first.</comment>
+</block>
+</statement>
+</block>
+</xml>

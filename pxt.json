@@ -1,0 +1,21 @@
+{
+    "name": "tds-meter",
+    "version": "0.3.0",
+    "description": "Calibrated analog TDS / EC25 with externally supplied temperature",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "main.ts",
+        "README.md"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "supportedTargets": [
+        "microbit"
+    ],
+    "public": true,
+    "preferredEditor": "tsprj"
+}
